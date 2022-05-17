@@ -35,7 +35,7 @@ document.getElementById("cookie").addEventListener("click", function cookie() {
         label.innerText = (`Your points: ${points}`);
         console.log(label.innerText);
         click *= 3;
-        comment.innerText = ('That\'s right, from here on out you are getting double the points!');
+        comment.innerText = ('That\'s right, from here on out you are getting triple the points!');
     }
 });
 
