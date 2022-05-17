@@ -8,12 +8,13 @@ h1,h2,h3 {
 
 #run {
     position: relative;
-    top: 20px;
-    left: 500px;
+    top: 50px;
+    left: 530px;
     float: left;
 }
- .shop{
+.shop{
     position: relative;
     float: right;
-    right: 450px;
+    right: 100px;
+    top: -90px;
 }

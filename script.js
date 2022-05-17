@@ -27,15 +27,13 @@ document.getElementById("cookie").addEventListener("click", function cookie() {
     let cookie = 15;
     if (points < 15) {
         console.log(points);
-        //comment.innerText = ('Your score isn\'t high enough, keep giving it all your love');
+        comment.innerText = ('Your score isn\'t high enough, keep giving it all your love');
     } else {
-        //comment.innerText = ('Congratulations you just bought a cookie for the dog!');
         points = points - cookie;
-        console.log(points)
-        label.innerText = (`Your points: ${points}`);
+        label.innerText = (`Your points: ${points}` + '\"multiplier x 3\" ');
         console.log(label.innerText);
         click *= 3;
-        comment.innerText = ('That\'s right, from here on out you are getting triple the points!');
+        comment.innerText = ('You just bought a cookie for the dog, from here on out you are getting triple the points!');
     }
 });
 
