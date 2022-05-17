@@ -6,6 +6,8 @@ label.innerText = ('This dog is in need of some attention:')
 let comment = document.getElementById("comment");
 //display text for start
 comment.innerText = ('Let\'s give it some love by clicking on it');
+//prepare variable for power so we can work with it
+let power = document.getElementById("power");
 //prepare variable for run so we can work with it
 let run = document.getElementById("run");
 //start score = 0
@@ -21,22 +23,42 @@ run.addEventListener("click", function getPoints() {
     //display a comment
     comment.innerText = ('Keep making this dog happy and earn more!')
 });
-//add a button that will allow to buy a cookie
+
+//add functions that will allow to buy and each time it will make the click-power go up:
 document.getElementById("cookie").addEventListener("click", function cookie() {
-    //set value for cookie
-    let cookie = 15;
-    if (points < 15) {
-        console.log(points);
-        comment.innerText = ('Your score isn\'t high enough, keep giving it all your love');
-    } else {
-        points = points - cookie;
-        label.innerText = (`Your points: ${points}` + '\"multiplier x 3\" ');
-        console.log(label.innerText);
-        click *= 3;
-        comment.innerText = ('You just bought a cookie for the dog, from here on out you are getting triple the points!');
-    }
+    buyMultiplier(15, 3, 'You just bought a cookie for the dog, from here on out you are getting triple the points!');
+    bostonPower(3);
+});
+document.getElementById("food").addEventListener("click", function food() {
+    buyMultiplier(30, 5, 'You just bought food for the dog, from here on out you are getting five times the points!');
+    bostonPower(5);
+});
+document.getElementById("drink").addEventListener("click", function drink() {
+    buyMultiplier(60, 8, 'You just bought water for the dog, from here on out you are getting eight times the points!');
+    bostonPower(8);
+});
+document.getElementById("walk").addEventListener("click", function walk() {
+    buyMultiplier(200, 12, 'You just went for a walk with the dog, from here on out you are getting twelve times the points!');
+    bostonPower(12);
+});
+document.getElementById("bone").addEventListener("click", function bone() {
+    buyMultiplier(500, 20, 'You just bought a bone for the dog, from here on out you are getting twenty times the points!');
+    bostonPower(20);
 });
 
+function buyMultiplier(price, multiplier, commentText) {
+    if (points < price) {
+        comment.innerText = ('Your score isn\'t high enough, keep giving it all your love');
+    } else {
+        points = points - price;
+        label.innerText = (`Your points: ${points}`);
+        click *= multiplier;
+        comment.innerText = commentText;
+    }
+}
+function bostonPower(multiplier) {
+    power.innerText = (`You now get ${multiplier} x the points!`);
+}
 
 
 
