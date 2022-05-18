@@ -1,12 +1,12 @@
 body {
-    background-color: grey;
     background-image: url("pics/background.jpg");
     background-size: cover;
 }
 
-h1,h2,h3,h4 {
-   text-align: center;
+h1, h2, h3, h4 {
+    text-align: center;
 }
+
 h1 {
     font-size: 46px;
 }
@@ -14,25 +14,64 @@ h1 {
 #run {
     position: relative;
     float: left;
-    width: 550px;
+    width: 650px;
+    height: auto;
+    top: -50px;
+    left: 130px;
 }
+
 /*images*/
-table, tr, td, img{
+table img {
     border-radius: 5px;
-    height: 10%;
-    width: 35%;
+    width: 150px;
+    height: auto;
 }
+
 /*table*/
 table {
     table-layout: fixed;
-    position:relative;
+    position: relative;
     float: right;
-    right: 80px;
+    right: 35px;
+    top: -70px;
 }
-table,tr, td {
-    border: 2px  outset;
+
+table, tr, td {
+    border: 2px outset;
     padding: 10px;
-    background-color: rgba(51,170,51, .1);
+    background-color: rgba(51, 170, 51, .1);
     color: black;
     text-align: center;
+}
+@media (max-width: 1285px) {
+    #run {
+        position: relative;
+        float: left;
+        max-width: 250px;
+        height: auto;
+        top: -25px;
+        left: 35px;
+    }
+    /*images*/
+    table img {
+        border-radius: 5px;
+        width: 50px;
+        height: auto;
+    }
+    /*table*/
+    table {
+        table-layout: fixed;
+        position: relative;
+        float: right;
+        right: 1px;
+        top: -20px;
+    }
+
+    table, tr, td {
+        border: 2px outset;
+        padding: 10px;
+        background-color: rgba(51, 170, 51, .1);
+        color: black;
+        text-align: center;
+    }
 }
